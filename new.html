@@ -1,0 +1,138 @@
+</head>
+
+<body>
+<style>
+	.share_div{width:0px;height:0px;overflow:hidden;}
+</style>
+<div class="share_div"><img src="images/cysy-logo.png"  /></div>
+
+<div style=" text-align:center;">                    
+
+<!-- /header -->
+<div  style=" text-align:center;">
+<img class="logo" src="https://www.cysy.com.cn/cjcx/images/cysy-logo.png"/>
+    <h1>汕头市潮阳实验学校查询系统</h1>
+    <br />
+    <div style="width:100%; border:1px #FC0 solid; background-color:#FFC;" align="center">
+
+<script language="javascript" type="text/javascript">
+/**
+     * [hasIllegalChar 判断是否含有script非法字符]
+     * @param  {[type]}  str [要判断的字符串]
+     * @return {Boolean}     [true：含有，验证不通过；false:不含有，验证通过]
+ */
+function hasIllegalChar1(str) {
+	//alert(str);
+   return new RegExp(".*?script[^>]*?.*?(<\/.*?script.*?>)*", "ig").test(str.value);
+}
+
+function hasIllegalChar2(str) {
+	//alert(str);
+   return new RegExp("[%--`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】'；：\"\"'。，、？]").test(str.value);
+}
+	
+function testIllegalChar(str){
+	//alert(str);
+	if (hasIllegalChar1(str) || hasIllegalChar2(str)){		
+		alert('含有非法字符！请修改后再试！');
+		str.value = "";
+	}
+}
+
+
+function validate(d)
+{
+  if(!(d.xm.value))
+  {
+	 alert('请输入考生姓名！');
+    d.xm.focus();
+    return false;
+  }else{
+	  if(!(d.kh.value)){
+		  alert('请输入考号！');
+		d.kh.focus();
+		return false;
+	  }else{
+		 
+		// if(!numberCheck(d.kh.value)){
+		//	  alert('考号应为数字！');
+		//	d.kh.focus();
+		//	return false;
+		//  }else{
+			return true;  
+		//  }
+	}
+	}
+}
+
+function check_select(d)
+{	
+	var xlykm = d.xlykm;
+	 for(var i=0;i<xlykm.length;i++){
+	  if(xlykm[i].checked==true){
+	   return true;
+	  }
+	 }
+	 alert("请至少选择一项！");
+	 return false;
+}
+
+function numberCheck(s){ 
+	var str=s;
+	var reg=/(^\d*$)/; 
+//alert(reg.test(str));
+	if (reg.test(str)==false)
+	{
+		//alert("请检查您输入的电话号码。");
+		return false;
+	}
+	else
+	{
+		//alert("输入的电话号码通过验证。");
+		return true;
+	}
+}
+</script>
+
+             	<h2><strong>高中部2022-2023学年度第二学期学生期末成绩查询</strong></h2>
+              <div align="center" style="margin:auto; margin-bottom:10px; padding-top:5px; padding-bottom:5px; width:95%; background-color:#eafed0; border:solid 1px #CCCCCC;">
+              
+              <div align="center">
+                                  <form action="score.php" method="post" name="cxcj" onSubmit="return validate(this)">
+                    <input name="exam_id" type="hidden" value="154" />
+                    <input name="warning" type="hidden" value="" />
+                                        <table width="90%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                        <td width="150" height="50" align="right" valign="middle">姓名：</td>
+                        <td width="100" height="50" align="left" valign="middle"><input name="xm" type="text" value="" size="15" onblur="testIllegalChar(this)"></td>
+                        </tr>
+                          <tr>
+                            <td height="50" align="right" valign="middle">学号/考号/入场证号：</td>
+                            <td height="50" align="left" valign="middle"><input name="kh" type="text" value="" size="15"  onblur="testIllegalChar(this)" /></td>
+                          </tr>
+                          <tr>
+                            <td height="50" colspan="2" align="center" valign="middle"><input type="submit" name="Submit" value="  登录查询  " style="height:2em; background-color:#360;border:1px #333 solid; color:#FFF; font-weight:bold;"  /></td>
+                          </tr>
+                        </tbody>
+                     </table>
+                     <hr />
+                                          【说明】<br />
+                     1、请根据提示输入相关内容进行查询。<br />
+                     2、如有问题请致电各学部教务处。
+                </form>
+                                  </div>
+            </div>                   
+            
+
+</div>
+ <!--/content-->
+<div align="center">
+
+<h2>【联系电话】</h2>
+0754-88722222（招生办公室）<br /> 
+<p>汕头市潮阳实验学校 版权所有&copy;</p>
+</div>
+<!-- /footer -->
+ </div>
+</body>
+</html>
