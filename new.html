@@ -64,19 +64,16 @@ function validate(d)
 	}
 	}
 }
-
-function check_select(d)
-{	
+function check_select(d) {	
 	var xlykm = d.xlykm;
-	 for(var i=0;i<xlykm.length;i++){
-	  if(xlykm[i].checked==true){
-		 window.location.href = "new_page.html";
-
-	   return true;
-	  }
-	 }
-	 alert("请至少选择一项！");
-	 return false;
+	for(var i=0;i<xlykm.length;i++) {
+		if(xlykm[i].checked == true) {
+			// window.location.href = "new_page.html";
+			return false;
+		}
+	}
+	alert("请至少选择一项！");
+	return false;
 }
 
 function numberCheck(s){ 
@@ -101,7 +98,7 @@ function numberCheck(s){
               <div align="center" style="margin:auto; margin-bottom:10px; padding-top:5px; padding-bottom:5px; width:95%; background-color:#eafed0; border:solid 1px #CCCCCC;">
               
               <div align="center">
-                                  <form action="score.php" method="post" name="cxcj" onSubmit="return validate(this)" target="_blank">
+                                  <form action="" method="post" name="cxcj" onSubmit="" target="_blank">
                     <input name="exam_id" type="hidden" value="154" />
                     <input name="warning" type="hidden" value="" />
                                         <table width="90%" border="0" cellpadding="0" cellspacing="0">
