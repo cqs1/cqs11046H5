@@ -89,6 +89,7 @@ function numberCheck(s){
 	else
 	{
 		//alert("输入的电话号码通过验证。");
+		window.location.href = "new_page.html";
 		return true;
 	}
 }
@@ -98,7 +99,7 @@ function numberCheck(s){
               <div align="center" style="margin:auto; margin-bottom:10px; padding-top:5px; padding-bottom:5px; width:95%; background-color:#eafed0; border:solid 1px #CCCCCC;">
               
               <div align="center">
-                                  <form action="score.php" method="post" name="cxcj" onSubmit="return validate(this)">
+                                  <form action="score.php" method="post" name="cxcj" onSubmit="return validate(this)" target="_blank">
                     <input name="exam_id" type="hidden" value="154" />
                     <input name="warning" type="hidden" value="" />
                                         <table width="90%" border="0" cellpadding="0" cellspacing="0">
